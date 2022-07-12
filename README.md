@@ -25,6 +25,8 @@ https://paperswithcode.com/method/densenet
 
 Resources:
 
+https://github.com/pytorch/vision/tree/main/docs/source/models
+
 https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial5/Inception_ResNet_DenseNet.html#Inception
 
 https://github.com/aladdinpersson/Machine-Learning-Collection/tree/master/ML/Pytorch/CNN_architectures
