@@ -76,7 +76,7 @@ class DenseNet121(nn.Module):
 
     self.layers = [6, 12, 24, 16]
     self.bottleneck_size = 2
-    self.growth_rate = 16
+    self.growth_rate = 32
     self.hidden_chans = self.growth_rate * self.bottleneck_size
        
     self.inconv = nn.Conv2d(in_chans, self.hidden_chans, kernel_size = 3, padding = 1)
