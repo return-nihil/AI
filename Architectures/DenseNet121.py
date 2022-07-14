@@ -57,6 +57,8 @@ class Transition(nn.Module):
     self.conv1x1 = nn.Sequential(nn.BatchNorm2d(in_chan),
                                  nn.ReLU(),
                                  nn.Conv2d(in_chan, out_chan, kernel_size = 1))
+    
+    self.dropout = nn.Dropout(p = DROPOUT)
 
     self.avgpool = nn.AvgPool2d(kernel_size = 2, stride = 2) 
 
@@ -64,6 +66,7 @@ class Transition(nn.Module):
   def forward(self, x):
 
     x = self.conv1x1(x)
+    x = self.dropout(x) # ADDED DROPOUT!
     out = self.avgpool(x)
 
     return out
