@@ -31,12 +31,12 @@ class SimpleSVM(nn.Module):
 
 
 class SVM(nn.Module):
-    def __init__(self, in_chans, num_class, dropout): # in_chans not used!! Just for immediate integration.
+    def __init__(self, in_chans, num_class, dropout):
         super(SVM, self).__init__()
 
         self.flat = nn.Flatten()
 
-        self.linear1 = nn.Sequential(nn.BatchNorm1d(196608), # Fix 3x128x128
+        self.linear1 = nn.Sequential(nn.BatchNorm1d(196608), 
                                      nn.Linear(196608, 1024))
 
         self.linear2 = nn.Sequential(nn.BatchNorm1d(1024),
