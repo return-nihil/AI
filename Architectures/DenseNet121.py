@@ -94,6 +94,7 @@ class DenseNet121(nn.Module):
 
     self.classifier = nn.Sequential(nn.Flatten(),
                                     nn.Linear(self.hidden_chans, 64),
+                                    nn.ReLU(),
                                     nn.Linear(64, num_class))
 
 
